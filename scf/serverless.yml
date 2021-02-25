@@ -1,5 +1,5 @@
 org: secondstate
-app: AIaaS-template
+app: ternsorflow-faas
 stage: prod
 
 component: scf
@@ -13,7 +13,7 @@ inputs:
   runtime: CustomRuntime
   region: ${env:region}
   memorySize: 512
-  timeout: 60
+  timeout: 600
   initTimeout: 10
   publicAccess: true
   layers:
@@ -31,4 +31,4 @@ inputs:
             - path: /
               method: POST
               enableCORS: true
-              serviceTimeout: 60
+              serviceTimeout: 600
